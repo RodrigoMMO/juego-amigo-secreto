@@ -1,5 +1,13 @@
 let amigos = [];
 
+//  Funcionalidad para presionar enter para ingresar amigo secreto
+var input = document.getElementById("amigo");
+input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+    event.preventDefault();
+    agregarAmigo();
+    }
+});
 
 function agregarAmigo() {
     let nombreAmigo = document.getElementById('amigo').value;
