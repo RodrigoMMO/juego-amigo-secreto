@@ -1,3 +1,5 @@
+let amigos = [];
+
 function agregarAmigo() {
     let nombreAmigo = document.getElementById('amigo').value;
     if (nombreAmigo == null || nombreAmigo == ''){
@@ -17,5 +19,8 @@ function actualizarListaAmigos(){
         nombresListaAmigos.innerHTML += `<li>${amigos[index]}</li>`
     }
     
+}
 
+function sortearAmigo() {
+    
 }
