@@ -1,6 +1,3 @@
-// El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
-let amigos = []
-
 function agregarAmigo() {
     let nombreAmigo = document.getElementById('amigo').value;
     if (nombreAmigo == null || nombreAmigo == ''){
@@ -8,7 +5,17 @@ function agregarAmigo() {
     }
     amigos.push(nombreAmigo);
     document.getElementById('amigo').value = '';
+    console.log(amigos);
+    actualizarListaAmigos();
     return;
 }
 
+function actualizarListaAmigos(){
+    let nombresListaAmigos = document.getElementById('listaAmigos');
+    nombresListaAmigos.innerHTML = '';
+    for (let index = 0; index < amigos.length; index++) {
+        nombresListaAmigos.innerHTML += `<li>${amigos[index]}</li>`
+    }
+    
 
+}
